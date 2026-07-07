@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: sqlmesh
-  version: "0.231.1"
+  version: 0.236.0
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlmesh-${{ version }}.tar.gz
-  sha256: 20bb81b0745d18f9f47743ab354ae52226f0bbe63717527f064363e1fea96140
+  sha256: 50e49dab5d1e669f47a319263f4d68dce620949a1fc1f15beece8e6e4f006fa2
 
 build:
   number: 0
@@ -32,7 +32,6 @@ requirements:
     - humanize
     - python-dotenv
     - python >=${{ python_min }}
-    - astor
     - click
     - croniter
     - python-duckdb >=0.10.0,!=0.10.3
@@ -47,11 +46,10 @@ requirements:
     - requests
     - rich
     - ruamel.yaml
-    - sqlglot >=28.10.1,<28.11.dev0
+    - sqlglot >=30.8.0,<30.9.dev0
     - tenacity
     - time-machine
     - json_stream
-
 tests:
   - python:
       imports:
